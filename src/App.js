@@ -49,11 +49,13 @@ class App extends Component {
   render() {
     const pageStyle={
       backgroundImage: "url(https://image.freepik.com/free-photo/trees-web-background_1426-1926.jpg)",
-      backgroundSize: 'cover',
-      overflow: 'hidden',
+      backgroundRepeat  : 'no-repeat',
+      backgroundPosition: 'center',
+      
     }
     return (
       <div style={pageStyle}>
+      <div>
         <Titles />
         <Form getWeather={this.getWeather} />
         <Weather 
@@ -64,6 +66,7 @@ class App extends Component {
           description={this.state.description}
           error={this.state.error}
         />
+      </div>
       </div>
     );
   }

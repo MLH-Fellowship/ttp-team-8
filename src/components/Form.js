@@ -4,6 +4,9 @@ import React, { Component } from "react"
 // import Col from 'react-bootstrap/Form'
 
 class Form extends Component {
+  formStyle={
+    textAlign: "center"
+  }
   render() {
     return (
       // <WForm onSubmit={this.props.getWeather}>
@@ -19,7 +22,7 @@ class Form extends Component {
       //   </Row>
       //   <button> Get Weather </button>
       // </WForm>
-      <form onSubmit={this.props.getWeather}>
+      <form onSubmit={this.props.getWeather} style={this.formStyle}>
         {/* <Row> */}
           {/* <Col> */}
             <input type="text" name="city" placeholder="city..." />
