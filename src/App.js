@@ -31,11 +31,11 @@ class App extends Component {
         city: data.name,
         country: data.sys.country,
         humidity: data.main.humidity,
-        description: data.weather[0].descrption,
+        description: data.weather[0].description,
         error: "",
       });
     } else {
-      this.serSate({
+      this.setState({
         temperature: undefined,
         city: undefined,
         country: undefined,
@@ -47,12 +47,17 @@ class App extends Component {
   };
 
   render() {
+    const pageStyle={
+      backgroundImage: "url(https://image.freepik.com/free-photo/trees-web-background_1426-1926.jpg)",
+      backgroundSize: 'cover',
+      overflow: 'hidden',
+    }
     return (
-      <div>
+      <div style={pageStyle}>
         <Titles />
         <Form getWeather={this.getWeather} />
-        <Weather
-          temperature={this.setState.temperature}
+        <Weather 
+          temperature={this.state.temperature}
           city={this.state.city}
           country={this.state.country}
           humidity={this.state.humidity}
