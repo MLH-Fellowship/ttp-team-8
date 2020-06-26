@@ -4,7 +4,7 @@ class Titles extends Component {
   render() {
     const titleStyle={
       textAlign:"center",
-      color:"green"
+      color:"black"
     }
     return (
       <div style={titleStyle}>

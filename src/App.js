@@ -3,6 +3,8 @@ import "./App.css";
 import Titles from "./components/Titles";
 import Form from "./components/Form";
 import Weather from "./components/Weather";
+import "bootstrap/dist/css/bootstrap.min.css";
+
 
 const API_KEY = "7fec35e807f5266daecf0ea2c67f65e9";
 
@@ -50,14 +52,21 @@ class App extends Component {
     const pageStyle={
       backgroundImage: "url(https://image.freepik.com/free-photo/trees-web-background_1426-1926.jpg)",
       backgroundRepeat  : 'no-repeat',
-      backgroundPosition: 'center',
-      
+      backgroundSize: 'cover',      
+    }
+    const layout={
+      padding:"30px"
     }
     return (
       <div style={pageStyle}>
       <div>
+        <div style={layout}>
         <Titles />
+        </div>
+        <div style={layout}>
         <Form getWeather={this.getWeather} />
+        </div>
+        <div style={layout}>
         <Weather 
           temperature={this.state.temperature}
           city={this.state.city}
@@ -66,6 +75,7 @@ class App extends Component {
           description={this.state.description}
           error={this.state.error}
         />
+        </div>
       </div>
       </div>
     );
