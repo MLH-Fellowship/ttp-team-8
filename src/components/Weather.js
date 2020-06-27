@@ -23,7 +23,7 @@ class Weather extends Component {
             </Card.Title>
             <Card.Text>
               {this.props.description && (
-                <p>Description: {this.props.description}</p>
+                <p>Conditions: {this.props.description}</p>
               )}
               {this.props.error && <p>{this.props.error}</p>}
             </Card.Text>

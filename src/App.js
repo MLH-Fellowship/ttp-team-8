@@ -50,7 +50,7 @@ class App extends Component {
 
   render() {
     const pageStyle={
-      backgroundImage: "url(https://image.freepik.com/free-photo/trees-web-background_1426-1926.jpg)",
+      backgroundImage: "url(https://image.freepik.com/free-photo/rain-drops-car-glass_1339-5021.jpg)",
       backgroundRepeat  : 'no-repeat',
       backgroundSize: 'cover',      
     }
