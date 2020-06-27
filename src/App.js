@@ -5,7 +5,7 @@ import Form from "./components/Form";
 import Weather from "./components/Weather";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-
+//API KEY
 const API_KEY = "7fec35e807f5266daecf0ea2c67f65e9";
 
 class App extends Component {
@@ -49,6 +49,7 @@ class App extends Component {
   };
 
   render() {
+    //Some styling
     const pageStyle={
       backgroundImage: "url(https://image.freepik.com/free-photo/rain-drops-car-glass_1339-5021.jpg)",
       backgroundRepeat  : 'no-repeat',
